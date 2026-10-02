@@ -63,3 +63,14 @@ scripts/         Development, build, and Ubuntu/Windows packaging
 build/           Generated frontend, bundled server, SEA blob, runtime cache
 dist/            Generated standalone executables
 ```
+
+## Scripts
+
+| File | Used By | Purpose |
+| --- | --- | --- |
+| `dev.ts` | `npm run dev` | Development server (Vue/Vite + Fastify backend) |
+| `build.ts` | `npm run build` | Compiles and bundles backend & frontend into `build/server.cjs` |
+| `package.ts` | `npm run package` / `package:linux` / `package:windows` | Creates standalone executables (Linux/Windows) |
+| `packaging.ts` | Internal | Helper logic for target parsing and platform checks, imported by `package.ts` |
+| `postject.d.ts` | Internal | Type declarations for the `postject` library used in packaging |
+

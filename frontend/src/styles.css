@@ -1,0 +1,43 @@
+:root {
+  font-family: Inter, "Segoe UI", system-ui, -apple-system, sans-serif;
+  color: #25352e;
+  background: #f5f6f2;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 280px; }
+button, a { -webkit-tap-highlight-color: transparent; }
+.shell { min-height: 100vh; min-height: 100svh; display: flex; flex-direction: column; }
+.header { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 28px 6%; }
+.brand { display: inline-flex; align-items: center; gap: 12px; text-decoration: none; color: inherit; font-weight: 650; font-size: 17px; }
+.brand-mark { display: grid; place-items: center; width: 36px; height: 36px; border-radius: 11px; color: white; background: #246b50; font-size: 25px; letter-spacing: -2px; padding-right: 3px; }
+.local-label { color: #68776e; font-size: 13px; }
+main { flex: 1; display: grid; place-items: center; padding: 48px 20px 72px; }
+.greeting-card { width: min(100%, 620px); padding: 56px 28px; text-align: center; background: #fff; border: 1px solid #e2e8df; border-radius: 28px; box-shadow: 0 16px 60px #25352e06; }
+.hello-icon { display: grid; place-items: center; margin: 0 auto 30px; width: 78px; height: 78px; color: #246b50; background: #edf5ed; border-radius: 24px; font-size: 45px; }
+.eyebrow { margin: 0 0 16px; color: #6a7e70; font-size: 10px; letter-spacing: 2px; font-weight: 650; }
+h1 { margin: 0; font-size: clamp(35px, 7vw, 62px); line-height: 1.12; font-weight: 650; letter-spacing: -2.5px; overflow-wrap: anywhere; }
+.description { margin: 20px 0 30px; color: #6c786f; font-size: 15px; line-height: 1.7; }
+.connection-status { display: flex; justify-content: center; align-items: center; gap: 8px; min-height: 20px; margin: 0 0 28px; color: #50715c; font-size: 12px; }
+.status-dot { flex-shrink: 0; width: 6px; height: 6px; background: #4d9870; border-radius: 50%; }
+.has-error { color: #a34436; }
+.has-error .status-dot { background: #a34436; }
+button { display: inline-flex; align-items: center; justify-content: center; gap: 10px; border: 0; border-radius: 12px; background: #246b50; color: #fff; padding: 14px 22px; min-height: 48px; font: inherit; font-size: 13px; font-weight: 550; cursor: pointer; transition: background 150ms; }
+button:hover:not(:disabled) { background: #1b533e; }
+button:disabled { opacity: .65; cursor: wait; }
+button svg { width: 17px; height: 17px; }
+:focus-visible { outline: 3px solid #78a68a; outline-offset: 4px; }
+footer { padding: 0 20px 28px; text-align: center; color: #788279; font-size: 12px; }
+@media (max-width: 480px) {
+  .header { padding: 22px; }
+  .local-label { display: none; }
+  main { padding: 28px 16px 48px; }
+  .greeting-card { padding: 44px 20px; border-radius: 22px; }
+  h1 { letter-spacing: -1.5px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  button { transition: none; }
+}
